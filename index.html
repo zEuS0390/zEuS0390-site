@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
+		
 		<title>Zeus James's Portfolio</title>
 
 		<!-- Load Bootstrap CSS -->
@@ -8,11 +10,13 @@
 			  rel="stylesheet"
 			  integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 			  crossorigin="anonymous">
+
 	</head>
 
 	<body>
+
 		<!-- Navigation Bar -->
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
 			<div class="container-fluid px-5" style="margin-top: 10px; margin-bottom: 10px;">
 
 				<!-- Navigation Bar Brand -->
@@ -58,6 +62,7 @@
 						</div>
 					</div>
 					<div class="col-lg-7 col-md-6 col-sm-12 p-5">
+
 						<h2>Welcome!</h2>
 						<p class="my-4">
 							I'm Zeus James. I graduated from the Technological Institute of the Philippines - Quezon City with a bachelor's degree in computer engineering, with a specialization in Intelligent Systems.
@@ -76,11 +81,19 @@
 			<section id="projects">
 				<div class="row px-4 pb-4 text-white" style="background-color: rgb(23, 23, 23);">
 					<div class="col p-5">
+
+						<!-- Title -->
 						<h2>Projects</h2>
+
 						<div class="row mt-4">
+
+							<!-- 1st Project -->
 							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
 								<div class="card bg-secondary text-white my-2 shadow">
-									<img src="docs/assets/ppe-for-construction-safety-detection.png" class="card-img-top" alt="...">
+									<img id="projects-card-1" 
+										 src="docs/assets/ppe-for-construction-safety-detection.png"
+										 class="card-img-top"
+										 alt="...">
 									<div class="card-body">
 										<h5 class="card-title text-center">Multiple Personal Protective Equipment for Construction Safety Monitoring System</h5>
 										<p class="card-text">
@@ -90,9 +103,14 @@
 									<a href="https://github.com/zEuS0390/ppe-for-construction-safety-detection" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3">See More</a>
 								</div>
 							</div>
+
+							<!-- 2nd Project -->
 							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
 								<div class="card bg-secondary text-white my-2 shadow">
-									<img src="docs/assets/kaizen-faculty-evaluation-by-zEuS0390.png" class="card-img-top" alt="...">
+									<img id="projects-card-2" 
+										 src="docs/assets/kaizen-faculty-evaluation-by-zEuS0390.png"
+										 class="card-img-top"
+										 alt="...">
 									<div class="card-body">
 										<h5 class="card-title text-center">Kaizen Faculty Evaluation</h5>
 										<p class="card-text">
@@ -103,6 +121,8 @@
 									<a href="https://github.com/zEuS0390/kaizen-faculty-eval" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3">See More</a>
 								</div>
 							</div>
+
+							<!-- 3rd Project -->
 							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
 								<div class="card bg-secondary text-white my-2 shadow">
 									<img src="docs/assets/voice-assisted-traffic-sign-detection.png" class="card-img-top" alt="...">
@@ -113,9 +133,15 @@
 									<a href="https://github.com/zEuS0390/python-voice-assisted-traffic-sign-detection" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3">See More</a>
 								</div>
 							</div>
+
+							<!-- 4th Project -->
 							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
 								<div class="card bg-secondary text-white my-2 shadow">
-									<img src="docs/assets/sfml-snake-game-by-zEuS0390.jpg" class="card-img-top" alt="...">
+									<img id="projects-card-4"
+										 src="docs/assets/sfml-snake-game-by-zEuS0390.jpg" 
+										 class="card-img-top" alt="..."
+										 onmouseenter="playAnimation('projects-card-4', 'docs/assets/sfml-snake-game-by-zEuS0390.gif')"
+										 onmouseout="showStatic('projects-card-4', 'docs/assets/sfml-snake-game-by-zEuS0390.jpg')">
 									<div class="card-body">
 										<h5 class="card-title text-center">SFML Snake Game</h5>
 										<p class="card-text">A snake game project from 2020 made in C++ with SFML library. You can watch the demo video from the provided link in README to see the actual gameplay.</p>
@@ -123,6 +149,8 @@
 									<a href="https://github.com/zEuS0390/cpp-sfml-snake-game" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3">See More</a>
 								</div>
 							</div>
+
+							<!-- 5th Project -->
 							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
 								<div class="card bg-secondary text-white my-2 shadow">
 									<img src="docs/assets/sfml-pong-game-by-zEuS0390.png" class="card-img-top" alt="...">
@@ -133,6 +161,8 @@
 									<a href="https://github.com/zEuS0390/cpp-sfml-pong-game" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3">See More</a>
 								</div>
 							</div>
+
+							<!-- 6th Project -->
 							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
 								<div class="card bg-secondary text-white my-2 shadow">
 									<img src="docs/assets/simple-astar-pathfinding-algorithm-simulation.png" class="card-img-top" alt="...">
@@ -143,6 +173,8 @@
 									<a href="https://github.com/zEuS0390/python-simple-astar-simulation" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3">See More</a>
 								</div>
 							</div>
+
+							<!-- 7th Project -->
 							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
 								<div class="card bg-secondary text-white my-2 shadow">
 									<img src="docs/assets/pyqt5-meat-shop-management-system.png" class="card-img-top" alt="...">
@@ -153,6 +185,8 @@
 									<a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3">See More</a>
 								</div>
 							</div>
+
+							<!-- 8th Project -->
 							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
 								<div class="card bg-secondary text-white my-2 shadow">
 									<img src="docs/assets/pygame-tic-tac-toe-by-zEuS0390.png" class="card-img-top" alt="...">
@@ -163,6 +197,8 @@
 									<a href="https://github.com/zEuS0390/python-tic-tac-toe" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3">See More</a>
 								</div>
 							</div>
+
+							<!-- 9th Project -->
 							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
 								<div class="card bg-secondary text-white my-2 shadow">
 									<img src="docs/assets/batch-script-cpp-tests.png" class="card-img-top" alt="...">
@@ -173,6 +209,7 @@
 									<a href="https://github.com/zEuS0390/batch-script-cpp-tests" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3">See More</a>
 								</div>
 							</div>
+
 						</div>
 					</div>
 				</div>
@@ -195,5 +232,18 @@
 			integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
 			crossorigin="anonymous">
 		</script>
+
+		<!-- Custom JS Script -->
+		<script>
+			function playAnimation(id, filepath)
+			{
+				document.getElementById(id).src = filepath;
+			}
+			function showStatic(id, filepath)
+			{
+				document.getElementById(id).src = filepath;
+			}
+		</script>
+
 	</body>
 </html>
