@@ -11,6 +11,20 @@
 			  integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 			  crossorigin="anonymous">
 
+		<style>
+			.projects-card-spinner {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				display: none;
+				justify-content: center;
+				align-items: center;
+			}
+			.projects-card-image-group {
+				position: relative;
+			}
+		</style>
+
 	</head>
 
 	<body>
@@ -137,11 +151,18 @@
 							<!-- 4th Project -->
 							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
 								<div class="card bg-secondary text-white my-2 shadow">
-									<img id="projects-card-4"
-										 src="docs/assets/sfml-snake-game-by-zEuS0390.jpg" 
-										 class="card-img-top" alt="..."
-										 onmouseenter="playAnimation('projects-card-4', 'docs/assets/sfml-snake-game-by-zEuS0390.gif')"
-										 onmouseout="showStatic('projects-card-4', 'docs/assets/sfml-snake-game-by-zEuS0390.jpg')">
+									<div class="projects-card-image-group">
+										<div id="projects-card-spinner-item-4" class="projects-card-spinner">
+											<div class="spinner-border" role="status">
+												<span class="visually-hidden">Loading...</span>
+											</div>
+										</div>
+										<img id="projects-card-4"
+												 src="docs/assets/sfml-snake-game-by-zEuS0390.jpg" 
+												 class="card-img-top" alt="..."
+												 onmouseenter="playAnimation('projects-card-4', 'projects-card-spinner-item-4', 'docs/assets/sfml-snake-game-by-zEuS0390.gif')"
+												 onmouseout="showStatic('projects-card-4', 'docs/assets/sfml-snake-game-by-zEuS0390.jpg')">
+									</div>
 									<div class="card-body">
 										<h5 class="card-title text-center">SFML Snake Game</h5>
 										<p class="card-text">A snake game project from 2020 made in C++ with SFML library. You can watch the demo video from the provided link in README to see the actual gameplay.</p>
@@ -235,9 +256,21 @@
 
 		<!-- Custom JS Script -->
 		<script>
-			function playAnimation(id, filepath)
+			function playAnimation(image_id, spinner_id, filepath)
 			{
-				document.getElementById(id).src = filepath;
+				var img_element = document.getElementById(image_id);
+				var spinner_element = document.getElementById(spinner_id);
+				
+				spinner_element.style.display = 'flex';
+
+				var new_image = new Image();
+				new_image.addEventListener('load', () => {
+					spinner_element.style.display = 'none';
+					img_element.style.display = 'inline';
+				})
+
+				new_image.src = filepath;
+				img_element.src = new_image.src;
 			}
 			function showStatic(id, filepath)
 			{
