@@ -5,13 +5,37 @@
 		
 		<title>Zeus James's Portfolio</title>
 
+		<link rel="icon" type="image/x-icon" href="docs/assets/navbar-brand-logo.png">
+
 		<!-- Load Bootstrap CSS -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
 			  rel="stylesheet"
 			  integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 			  crossorigin="anonymous">
 
+		<!-- Load Font Awesome CSS -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+
+		<!-- Custom CSS Style -->
 		<style>
+			#my-image {
+				transition-property: all;
+				transition-duration: 0.3s;
+				transition-timing-function: ease;
+				-webkit-transition-property: all; 
+				-webkit-transition-duration: 0.3s; 
+				-webkit-transition-timing-function: ease;
+			}
+			#my-image:hover {
+				filter: brightness(105%);
+				-webkit-filter: brightness(105%);
+			}
+			body {
+				background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("docs/assets/background-image.jpg");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
 			.projects-card-spinner {
 				position: absolute;
 				height: 100%;
@@ -22,6 +46,26 @@
 			}
 			.projects-card-image-group {
 				position: relative;
+			}
+			::-webkit-scrollbar {
+				width: 10px;
+				background-color: rgb(43, 43, 43);
+			}
+			::-webkit-scrollbar-thumb {
+				border-radius: 10px;
+				background-color: rgb(146, 146, 146);
+			}
+			.projects-card-anim {
+				transition-property: all;
+				transition-duration: 0.3s;
+				transition-timing-function: ease;
+				-webkit-transition-property: all; 
+				-webkit-transition-duration: 0.3s; 
+				-webkit-transition-timing-function: ease; 
+			}
+			.projects-card-anim:hover {
+				transform: scale(1.005);
+				z-index: 1;
 			}
 		</style>
 
@@ -34,7 +78,10 @@
 			<div class="container-fluid px-5" style="margin-top: 10px; margin-bottom: 10px;">
 
 				<!-- Navigation Bar Brand -->
-				<a class="navbar-brand" href="#">Zeus James (zEuS0390)</a>
+				<a class="navbar-brand" href="#">
+					<img class="d-inline-block align-text-top" src="docs/assets/navbar-brand-logo.png" alt="" width="32" height="32">
+					Zeus James (zEuS0390)
+				</a>
 
 				<!-- Hamburger Menu Button -->
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_navigation" aria-expanded="false">
@@ -65,19 +112,24 @@
 		</nav>
 
 		<!-- Content -->
-		<div class="container-fluid" style="padding-top: 76px;">
+		<div class="container" style="padding-top: 76px;">
+
+			<br>
 
 			<!-- About Section -->
 			<section id="about">
-				<div class="row p-4 text-white" style="background-color: rgb(48, 48, 48);">
+				<div class="row p-4 text-white rounded" style="background-color: rgba(23, 23, 23, 0.8);">
 					<div class="col-lg-5 col-md-6 col-sm-12">
 						<div class="d-flex justify-content-center align-items-center p-2" style="height: 100%;">
-							<img class="rounded-circle" src="https://avatars2.githubusercontent.com/u/39390245" style="width: 100%; height: auto;">
+							<img id="my-image" class="rounded-circle" src="https://avatars2.githubusercontent.com/u/39390245" style="width: 100%; height: auto;">
 						</div>
 					</div>
 					<div class="col-lg-7 col-md-6 col-sm-12 p-5">
 
 						<h2>Welcome!</h2>
+
+						<hr>
+
 						<p class="my-4">
 							I'm Zeus James. I graduated from the Technological Institute of the Philippines - Quezon City with a bachelor's degree in computer engineering, with a specialization in Intelligent Systems.
 							<br><br>
@@ -91,65 +143,101 @@
 				</div>
 			</section>
 
+			<br>
+
 			<!-- Projects Section -->
 			<section id="projects">
-				<div class="row px-4 pb-4 text-white" style="background-color: rgb(23, 23, 23);">
+				<div class="row px-4 pb-4 text-white rounded" style="background-color: rgba(23, 23, 23, 0.8);">
 					<div class="col p-5">
 
 						<!-- Title -->
 						<h2>Projects</h2>
 
+						<hr>
+
 						<div class="row mt-4">
 
 							<!-- 1st Project -->
-							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch projects-card-anim">
 								<div class="card bg-secondary text-white my-2 shadow">
 									<img id="projects-card-1" 
 										 src="docs/assets/ppe-for-construction-safety-detection.png"
 										 class="card-img-top"
-										 alt="...">
+										 alt="..."
+										 ondragstart="return false;"
+										 oncontextmenu="return false;">
 									<div class="card-body">
 										<h5 class="card-title text-center">Multiple Personal Protective Equipment for Construction Safety Monitoring System</h5>
+										<hr>
 										<p class="card-text">
 											A software application that monitors compliance with multiple personal protective equipment for construction safety and delivers reports to mobile applications of safety officers via a lightweight messaging protocol called MQTT.
 										</p>
 									</div>
-									<a href="https://github.com/zEuS0390/ppe-for-construction-safety-detection" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3">See More</a>
+									<a href="https://github.com/zEuS0390/ppe-for-construction-safety-detection" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow">See More</a>
 								</div>
 							</div>
 
 							<!-- 2nd Project -->
-							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch projects-card-anim">
 								<div class="card bg-secondary text-white my-2 shadow">
-									<img id="projects-card-2" 
-										 src="docs/assets/kaizen-faculty-evaluation-by-zEuS0390.png"
-										 class="card-img-top"
-										 alt="...">
+									<div class="projects-card-image-group">
+										<div id="projects-card-spinner-item-2" class="projects-card-spinner">
+											<div class="spinner-border" role="status">
+												<span class="visually-hidden">Loading...</span>
+											</div>
+										</div>
+										<img id="projects-card-2" 
+											src="docs/assets/kaizen-faculty-evaluation-by-zEuS0390.png"
+											class="card-img-top"
+											alt="..."
+											ondragstart="return false;"
+											oncontextmenu="return false;"
+											onmouseenter="playAnimation('projects-card-2', 'projects-card-spinner-item-2', 'docs/assets/kaizen-faculty-evaluation-by-zEuS0390.gif')"
+											 onmouseout="showStatic('projects-card-2', 'projects-card-spinner-item-2', 'docs/assets/kaizen-faculty-evaluation-by-zEuS0390.png')">
+									</div>
 									<div class="card-body">
 										<h5 class="card-title text-center">Kaizen Faculty Evaluation</h5>
+										<hr>
 										<p class="card-text">
 											A web application that manages the evaluation of faculty members in the computer engineering department at Technological Institute of the Philippines - Quezon City. 
 											It was conducted for the faculty members to see their performance based on the requirements provided by the head of the department.
 										</p>
 									</div>
-									<a href="https://github.com/zEuS0390/kaizen-faculty-eval" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3">See More</a>
+									<a href="https://github.com/zEuS0390/kaizen-faculty-eval" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow">See More</a>
 								</div>
 							</div>
 
 							<!-- 3rd Project -->
-							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch projects-card-anim">
 								<div class="card bg-secondary text-white my-2 shadow">
-									<img src="docs/assets/voice-assisted-traffic-sign-detection.png" class="card-img-top" alt="...">
+									<div class="projects-card-image-group">
+										<div id="projects-card-spinner-item-3" class="projects-card-spinner">
+											<div class="spinner-border" role="status">
+												<span class="visually-hidden">Loading...</span>
+											</div>
+										</div>
+										<img id="projects-card-3"
+											 src="docs/assets/voice-assisted-traffic-sign-detection.png" 
+											 class="card-img-top" 
+											 alt="..."
+											 ondragstart="return false;"
+											 oncontextmenu="return false;"
+											 onmouseenter="playAnimation('projects-card-3', 'projects-card-spinner-item-3', 'docs/assets/voice-assisted-traffic-sign-detection.gif')"
+											 onmouseout="showStatic('projects-card-3', 'projects-card-spinner-item-3', 'docs/assets/voice-assisted-traffic-sign-detection.png')">
+									</div>
 									<div class="card-body">
 										<h5 class="card-title text-center">AI-Aided Traffic Regulatory and Warnings Signs Detection for Driver Awareness</h5>
-										<p class="card-text">A python-based software application that uses state-of-the-art object detection algorithm (YOLO) to detect regulatory and warning traffic signs with automated voice notification system.</p>
+										<hr>
+										<p class="card-text">
+											A python-based software application that uses state-of-the-art object detection algorithm (YOLO) to detect regulatory and warning traffic signs with automated voice notification system.
+										</p>
 									</div>
-									<a href="https://github.com/zEuS0390/python-voice-assisted-traffic-sign-detection" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3">See More</a>
+									<a href="https://github.com/zEuS0390/python-voice-assisted-traffic-sign-detection" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow">See More</a>
 								</div>
 							</div>
 
 							<!-- 4th Project -->
-							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch projects-card-anim">
 								<div class="card bg-secondary text-white my-2 shadow">
 									<div class="projects-card-image-group">
 										<div id="projects-card-spinner-item-4" class="projects-card-spinner">
@@ -158,76 +246,167 @@
 											</div>
 										</div>
 										<img id="projects-card-4"
-												 src="docs/assets/sfml-snake-game-by-zEuS0390.jpg" 
-												 class="card-img-top" alt="..."
-												 onmouseenter="playAnimation('projects-card-4', 'projects-card-spinner-item-4', 'docs/assets/sfml-snake-game-by-zEuS0390.gif')"
-												 onmouseout="showStatic('projects-card-4', 'docs/assets/sfml-snake-game-by-zEuS0390.jpg')">
+											src="docs/assets/sfml-snake-game-by-zEuS0390.jpg" 
+											class="card-img-top" 
+											alt="..."
+											ondragstart="return false;"
+											oncontextmenu="return false;"
+											onmouseenter="playAnimation('projects-card-4', 'projects-card-spinner-item-4', 'docs/assets/sfml-snake-game-by-zEuS0390.gif')"
+											onmouseout="showStatic('projects-card-4', 'projects-card-spinner-item-4', 'docs/assets/sfml-snake-game-by-zEuS0390.jpg')">
 									</div>
 									<div class="card-body">
 										<h5 class="card-title text-center">SFML Snake Game</h5>
-										<p class="card-text">A snake game project from 2020 made in C++ with SFML library. You can watch the demo video from the provided link in README to see the actual gameplay.</p>
+										<hr>
+										<p class="card-text">
+											A snake game project from 2020 made in C++ with SFML library. You can watch the demo video from the provided link in README to see the actual gameplay.
+										</p>
 									</div>
-									<a href="https://github.com/zEuS0390/cpp-sfml-snake-game" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3">See More</a>
+									<a href="https://github.com/zEuS0390/cpp-sfml-snake-game" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow">See More</a>
 								</div>
 							</div>
 
 							<!-- 5th Project -->
-							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch projects-card-anim">
 								<div class="card bg-secondary text-white my-2 shadow">
-									<img src="docs/assets/sfml-pong-game-by-zEuS0390.png" class="card-img-top" alt="...">
+									<div class="projects-card-image-group">
+										<div id="projects-card-spinner-item-5" class="projects-card-spinner">
+											<div class="spinner-border" role="status">
+												<span class="visually-hidden">Loading...</span>
+											</div>
+										</div>
+										<img id="projects-card-5"
+											src="docs/assets/sfml-pong-game-by-zEuS0390.png" 
+											class="card-img-top" 
+											alt="..."
+											ondragstart="return false;"
+											oncontextmenu="return false;"
+											onmouseenter="playAnimation('projects-card-5', 'projects-card-spinner-item-5', 'docs/assets/sfml-pong-game-by-zEuS0390.gif')"
+											onmouseout="showStatic('projects-card-5', 'projects-card-spinner-item-5', 'docs/assets/sfml-pong-game-by-zEuS0390.png')">
+									</div>
 									<div class="card-body">
 										<h5 class="card-title text-center">SFML Pong Game</h5>
-										<p class="card-text">A simple pong game project from 2020 made in C++ with SFML library. You can watch the demo video from the provided link in README to see the actual gameplay.</p>
+										<hr>
+										<p class="card-text">
+											A simple pong game project from 2020 made in C++ with SFML library. You can watch the demo video from the provided link in README to see the actual gameplay.
+										</p>
 									</div>
-									<a href="https://github.com/zEuS0390/cpp-sfml-pong-game" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3">See More</a>
+									<a href="https://github.com/zEuS0390/cpp-sfml-pong-game" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow">See More</a>
 								</div>
 							</div>
 
 							<!-- 6th Project -->
-							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch projects-card-anim">
 								<div class="card bg-secondary text-white my-2 shadow">
-									<img src="docs/assets/simple-astar-pathfinding-algorithm-simulation.png" class="card-img-top" alt="...">
+									<div class="projects-card-image-group">
+										<div id="projects-card-spinner-item-6" class="projects-card-spinner">
+											<div class="spinner-border" role="status">
+												<span class="visually-hidden">Loading...</span>
+											</div>
+										</div>
+										<img id="projects-card-6"
+											src="docs/assets/simple-astar-pathfinding-algorithm-simulation.png" 
+											class="card-img-top" 
+											alt="..."
+											ondragstart="return false;"
+											oncontextmenu="return false;"
+											onmouseenter="playAnimation('projects-card-6', 'projects-card-spinner-item-6', 'docs/assets/simple-astar-pathfinding-algorithm-simulation.gif')"
+											onmouseout="showStatic('projects-card-6', 'projects-card-spinner-item-6', 'docs/assets/simple-astar-pathfinding-algorithm-simulation.png')">
+									</div>
 									<div class="card-body">
 										<h5 class="card-title text-center">A* Pathfinding Algorithm Simulation</h5>
-										<p class="card-text">An A* star pathfinding algorithm simulation in a tilemap scrolling environment made in Python with PyGame Library.</p>
+										<hr>
+										<p class="card-text">
+											An A* star pathfinding algorithm simulation in a tilemap scrolling environment made in Python with PyGame Library.
+										</p>
 									</div>
-									<a href="https://github.com/zEuS0390/python-simple-astar-simulation" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3">See More</a>
+									<a href="https://github.com/zEuS0390/python-simple-astar-simulation" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow">See More</a>
 								</div>
 							</div>
 
 							<!-- 7th Project -->
-							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch projects-card-anim">
 								<div class="card bg-secondary text-white my-2 shadow">
-									<img src="docs/assets/pyqt5-meat-shop-management-system.png" class="card-img-top" alt="...">
+									<div class="projects-card-image-group">
+										<div id="projects-card-spinner-item-7" class="projects-card-spinner">
+											<div class="spinner-border" role="status">
+												<span class="visually-hidden">Loading...</span>
+											</div>
+										</div>
+										<img id="projects-card-7"
+											src="docs/assets/pyqt5-meat-shop-management-system.png"
+											class="card-img-top"
+											alt="..."
+											ondragstart="return false;"
+											oncontextmenu="return false;"
+											onmouseenter="playAnimation('projects-card-7', 'projects-card-spinner-item-7', 'docs/assets/pyqt5-meat-shop-management-system.gif')"
+											onmouseout="showStatic('projects-card-7', 'projects-card-spinner-item-7', 'docs/assets/pyqt5-meat-shop-management-system.png')">
+									</div>
 									<div class="card-body">
 										<h5 class="card-title text-center">PyQt5 Meat Shop Management System</h5>
-										<p class="card-text">A GUI-based meat shop management system that handles the selling of different kinds of meat. It performs basic CRUD operations from scratch without using any database management system like SQLite or MySQL.</p>
+										<hr>
+										<p class="card-text">
+											A GUI-based meat shop management system that handles the selling of different kinds of meat. It performs basic CRUD operations from scratch without using any database management system like SQLite or MySQL.
+										</p>
 									</div>
-									<a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3">See More</a>
+									<a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow">See More</a>
 								</div>
 							</div>
 
 							<!-- 8th Project -->
-							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch projects-card-anim">
 								<div class="card bg-secondary text-white my-2 shadow">
-									<img src="docs/assets/pygame-tic-tac-toe-by-zEuS0390.png" class="card-img-top" alt="...">
+									<div class="projects-card-image-group">
+										<div id="projects-card-spinner-item-8" class="projects-card-spinner">
+											<div class="spinner-border" role="status">
+												<span class="visually-hidden">Loading...</span>
+											</div>
+										</div>
+										<img id="projects-card-8"
+											src="docs/assets/pygame-tic-tac-toe-by-zEuS0390.png" 
+											class="card-img-top" 
+											alt="..."
+											ondragstart="return false;"
+											oncontextmenu="return false;"
+											onmouseenter="playAnimation('projects-card-8', 'projects-card-spinner-item-8', 'docs/assets/pygame-tic-tac-toe-by-zEuS0390.gif')"
+											onmouseout="showStatic('projects-card-8', 'projects-card-spinner-item-8', 'docs/assets/pygame-tic-tac-toe-by-zEuS0390.png')">
+									</div>
 									<div class="card-body">
 										<h5 class="card-title text-center">PyGame Tic-Tac-Toe Game</h5>
-										<p class="card-text">A simple tic-tac-toe game project made with PyGame in Python. It follows the same mechanics as the actual game.</p>
+										<hr>
+										<p class="card-text">
+											A simple tic-tac-toe game project made with PyGame in Python that follows the same mechanics of the actual game. It was one of my earliest projects when I started learning programming.
+										</p>
 									</div>
-									<a href="https://github.com/zEuS0390/python-tic-tac-toe" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3">See More</a>
+									<a href="https://github.com/zEuS0390/python-tic-tac-toe" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow">See More</a>
 								</div>
 							</div>
 
 							<!-- 9th Project -->
-							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+							<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch projects-card-anim">
 								<div class="card bg-secondary text-white my-2 shadow">
-									<img src="docs/assets/batch-script-cpp-tests.png" class="card-img-top" alt="...">
-									<div class="card-body">
-										<h5 class="card-title text-center">Simple C++ Tests with Batch Script</h5>
-										<p class="card-text">A Windows-based testing batch script that tests simple C++ programs, typically useful for learners.</p>
+									<div class="projects-card-image-group">
+										<div id="projects-card-spinner-item-9" class="projects-card-spinner">
+											<div class="spinner-border" role="status">
+												<span class="visually-hidden">Loading...</span>
+											</div>
+										</div>
+										<img id="projects-card-9"
+											src="docs/assets/batch-script-cpp-tests.png" 
+											class="card-img-top" 
+											alt="..."
+											ondragstart="return false;"
+											oncontextmenu="return false;"
+											onmouseenter="playAnimation('projects-card-9', 'projects-card-spinner-item-9', 'docs/assets/batch-script-cpp-tests.gif')"
+											onmouseout="showStatic('projects-card-9', 'projects-card-spinner-item-9', 'docs/assets/batch-script-cpp-tests.png')">
 									</div>
-									<a href="https://github.com/zEuS0390/batch-script-cpp-tests" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3">See More</a>
+									<div class="card-body">
+										<h5 class="card-title text-center">Automating Simple C++ Tests with Batch Script</h5>
+										<hr>
+										<p class="card-text">
+											A Windows-based testing batch script that tests simple C++ programs, typically useful for learners.
+										</p>
+									</div>
+									<a href="https://github.com/zEuS0390/batch-script-cpp-tests" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow">See More</a>
 								</div>
 							</div>
 
@@ -236,11 +415,19 @@
 				</div>
 			</section>
 
+			<br>
+
 		</div>
 
 		<!-- Footer -->
 		<div class="container-fluid bg-dark text-white">
-			<footer class="d-flex flex-wrap justify-content-center align-items-center py-4" style="z-index: 0;">
+			<footer class="d-flex flex-column justify-content-center align-items-center py-4" style="z-index: 0;">
+				<div class="mb-3">
+					<a href="https://github.com/zEuS0390" target="_blank" rel="noopener noreferrer"><div class="fab fa-github mx-4" style="color: white; font-size: 30px;"></div></a>
+					<a href="https://www.facebook.com/00ZeUsJaMeS00" target="_blank" rel="noopener noreferrer"><div class="fab fa-facebook-square mx-4" style="color: white; font-size: 30px;"></div></a>
+					<a href="https://www.youtube.com/channel/UC4wkNKX83ZA5qZNf7CsflWQ" target="_blank" rel="noopener noreferrer"><div class="fab fa-youtube mx-4" style="color: white; font-size: 30px;"></div></a>
+					<a href="https://www.linkedin.com/in/zeus0390" target="_blank" rel="noopener noreferrer"><div class="fab fa-linkedin mx-4" style="color: white; font-size: 30px;"></div></a>
+				</div>
 				<div class="d-flex align-items-center">
 					&copy; Copyright 2023
 				</div>
@@ -260,21 +447,27 @@
 			{
 				var img_element = document.getElementById(image_id);
 				var spinner_element = document.getElementById(spinner_id);
-				
-				spinner_element.style.display = 'flex';
 
 				var new_image = new Image();
-				new_image.addEventListener('load', () => {
-					spinner_element.style.display = 'none';
-					img_element.style.display = 'inline';
-				})
-
 				new_image.src = filepath;
 				img_element.src = new_image.src;
+
+				if (!new_image.complete) 
+				{
+					spinner_element.style.display = 'flex';
+					new_image.addEventListener('load', () => {
+						spinner_element.style.display = 'none';
+						img_element.style.display = 'inline';
+					})
+				}
+
 			}
-			function showStatic(id, filepath)
+			function showStatic(image_id, spinner_id, filepath)
 			{
-				document.getElementById(id).src = filepath;
+				var img_element = document.getElementById(image_id);
+				var spinner_element = document.getElementById(spinner_id);
+				spinner_element.style.display = 'none';
+				img_element.src = filepath;
 			}
 		</script>
 
