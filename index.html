@@ -452,15 +452,11 @@
 				new_image.src = filepath;
 				img_element.src = new_image.src;
 
-				if (!new_image.complete) 
-				{
-					spinner_element.style.display = 'flex';
-					new_image.addEventListener('load', () => {
-						spinner_element.style.display = 'none';
-						img_element.style.display = 'inline';
-					})
-				}
-
+				spinner_element.style.display = 'flex';
+				new_image.addEventListener('load', () => {
+					spinner_element.style.display = 'none';
+					img_element.style.display = 'inline';
+				})
 			}
 			function showStatic(image_id, spinner_id, filepath)
 			{
