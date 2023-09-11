@@ -448,15 +448,17 @@
 				var img_element = document.getElementById(image_id);
 				var spinner_element = document.getElementById(spinner_id);
 
-				var new_image = new Image();
-				new_image.src = filepath;
-				img_element.src = new_image.src;
-
 				spinner_element.style.display = 'flex';
+
+				var new_image = new Image();
+				
 				new_image.addEventListener('load', () => {
 					spinner_element.style.display = 'none';
 					img_element.style.display = 'inline';
 				})
+
+				new_image.src = filepath;
+				img_element.src = new_image.src;
 			}
 			function showStatic(image_id, spinner_id, filepath)
 			{
