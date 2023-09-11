@@ -69,6 +69,33 @@
 				transform: scale(1.005);
 				z-index: 1;
 			}
+			.nav-brand {
+				font-size: 1rem;
+			}
+			.nav-link {
+				font-size: 0.9rem;
+			}
+			.p {
+				font-size: 1rem;
+			}
+			.card-title {
+				font-size: 1rem;
+			}
+			.card-text {
+				font-size: 0.9rem;
+			}
+			.section-title {
+				font-size: 1.5rem;
+			}
+			.section-desc {
+				font-size: 0.9rem;
+			}
+			.card-btn {
+				font-size: 0.9rem;
+			}
+			.footer-copyright {
+				font-size: 0.9rem;
+			}
 		</style>
 
 	</head>
@@ -81,8 +108,8 @@
 
 				<!-- Navigation Bar Brand -->
 				<a class="navbar-brand" href="#">
-					<img class="d-inline-block align-text-top" src="docs/assets/navbar-brand-logo.png" alt="" width="32" height="32">
-					Zeus James (zEuS0390)
+					<img class="d-inline-block align-text-top mx-2" src="docs/assets/navbar-brand-logo.png" alt="" width="32" height="32">
+					Zeus James
 				</a>
 
 				<!-- Hamburger Menu Button -->
@@ -120,7 +147,7 @@
 
 			<!-- About Section -->
 			<section id="about">
-				<div class="row p-4 text-white rounded" style="background-color: rgba(23, 23, 23, 0.8);">
+				<div class="row p-4 text-white rounded mx-2" style="background-color: rgba(23, 23, 23, 0.8);">
 					<div class="col-lg-5 col-md-6 col-sm-12">
 						<div class="d-flex justify-content-center align-items-center p-2" style="height: 100%;">
 							<img id="my-image" class="rounded-circle" src="https://avatars2.githubusercontent.com/u/39390245" style="width: 100%; height: auto;">
@@ -128,11 +155,11 @@
 					</div>
 					<div class="col-lg-7 col-md-6 col-sm-12 p-5">
 
-						<h2>Welcome!</h2>
+						<h2 class="section-title">Welcome!</h2>
 
 						<hr>
 
-						<p class="my-4">
+						<p class="my-4 section-desc">
 							I'm Zeus James. I graduated from the Technological Institute of the Philippines - Quezon City with a bachelor's degree in computer engineering, with a specialization in Intelligent Systems.
 							<br><br>
 							In my free time, I like watching videos and playing games on my computer. Although the computer is a bit old, I can still use it. In fact, I've been using it since I was in high school. Also recently, I started working out to improve myself and be in good shape. 
@@ -149,11 +176,11 @@
 
 			<!-- Projects Section -->
 			<section id="projects">
-				<div class="row px-4 pb-4 text-white rounded" style="background-color: rgba(23, 23, 23, 0.8);">
+				<div class="row px-4 pb-4 text-white rounded mx-2" style="background-color: rgba(23, 23, 23, 0.8);">
 					<div class="col p-5">
 
 						<!-- Title -->
-						<h2>Projects</h2>
+						<h2 class="section-title">Projects</h2>
 
 						<hr>
 
@@ -175,7 +202,7 @@
 											A software application that monitors compliance with multiple personal protective equipment for construction safety and delivers reports to mobile applications of safety officers via a lightweight messaging protocol called MQTT.
 										</p>
 									</div>
-									<a href="https://github.com/zEuS0390/ppe-for-construction-safety-detection" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow">See More</a>
+									<a href="https://github.com/zEuS0390/ppe-for-construction-safety-detection" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow card-btn">See More</a>
 								</div>
 							</div>
 
@@ -205,7 +232,7 @@
 											It was conducted for the faculty members to see their performance based on the requirements provided by the head of the department.
 										</p>
 									</div>
-									<a href="https://github.com/zEuS0390/kaizen-faculty-eval" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow">See More</a>
+									<a href="https://github.com/zEuS0390/kaizen-faculty-eval" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow card-btn">See More</a>
 								</div>
 							</div>
 
@@ -234,7 +261,7 @@
 											A python-based software application that uses state-of-the-art object detection algorithm (YOLO) to detect regulatory and warning traffic signs with automated voice notification system.
 										</p>
 									</div>
-									<a href="https://github.com/zEuS0390/python-voice-assisted-traffic-sign-detection" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow">See More</a>
+									<a href="https://github.com/zEuS0390/python-voice-assisted-traffic-sign-detection" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow card-btn">See More</a>
 								</div>
 							</div>
 
@@ -263,7 +290,7 @@
 											A snake game project from 2020 made in C++ with SFML library. You can watch the demo video from the provided link in README to see the actual gameplay.
 										</p>
 									</div>
-									<a href="https://github.com/zEuS0390/cpp-sfml-snake-game" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow">See More</a>
+									<a href="https://github.com/zEuS0390/cpp-sfml-snake-game" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow card-btn">See More</a>
 								</div>
 							</div>
 
@@ -292,7 +319,7 @@
 											A simple pong game project from 2020 made in C++ with SFML library. You can watch the demo video from the provided link in README to see the actual gameplay.
 										</p>
 									</div>
-									<a href="https://github.com/zEuS0390/cpp-sfml-pong-game" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow">See More</a>
+									<a href="https://github.com/zEuS0390/cpp-sfml-pong-game" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow card-btn">See More</a>
 								</div>
 							</div>
 
@@ -321,7 +348,7 @@
 											An A* star pathfinding algorithm simulation in a tilemap scrolling environment made in Python with PyGame Library.
 										</p>
 									</div>
-									<a href="https://github.com/zEuS0390/python-simple-astar-simulation" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow">See More</a>
+									<a href="https://github.com/zEuS0390/python-simple-astar-simulation" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow card-btn">See More</a>
 								</div>
 							</div>
 
@@ -350,7 +377,7 @@
 											A GUI-based meat shop management system that handles the selling of different kinds of meat. It performs basic CRUD operations from scratch without using any database management system like SQLite or MySQL.
 										</p>
 									</div>
-									<a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow">See More</a>
+									<a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow card-btn">See More</a>
 								</div>
 							</div>
 
@@ -379,7 +406,7 @@
 											A simple tic-tac-toe game project made with PyGame in Python that follows the same mechanics of the actual game. It was one of my earliest projects when I started learning programming.
 										</p>
 									</div>
-									<a href="https://github.com/zEuS0390/python-tic-tac-toe" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow">See More</a>
+									<a href="https://github.com/zEuS0390/python-tic-tac-toe" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow card-btn">See More</a>
 								</div>
 							</div>
 
@@ -408,7 +435,7 @@
 											A Windows-based testing batch script that tests simple C++ programs, typically useful for learners.
 										</p>
 									</div>
-									<a href="https://github.com/zEuS0390/batch-script-cpp-tests" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow">See More</a>
+									<a href="https://github.com/zEuS0390/batch-script-cpp-tests" target="_blank" rel="noopener noreferrer" class="btn btn-dark m-3 shadow card-btn">See More</a>
 								</div>
 							</div>
 
@@ -425,12 +452,12 @@
 		<div class="container-fluid bg-dark text-white">
 			<footer class="d-flex flex-column justify-content-center align-items-center py-4" style="z-index: 0;">
 				<div class="mb-3">
-					<a href="https://github.com/zEuS0390" target="_blank" rel="noopener noreferrer"><div class="fab fa-github mx-4" style="color: white; font-size: 30px;"></div></a>
-					<a href="https://www.facebook.com/00ZeUsJaMeS00" target="_blank" rel="noopener noreferrer"><div class="fab fa-facebook-square mx-4" style="color: white; font-size: 30px;"></div></a>
-					<a href="https://www.youtube.com/channel/UC4wkNKX83ZA5qZNf7CsflWQ" target="_blank" rel="noopener noreferrer"><div class="fab fa-youtube mx-4" style="color: white; font-size: 30px;"></div></a>
-					<a href="https://www.linkedin.com/in/zeus0390" target="_blank" rel="noopener noreferrer"><div class="fab fa-linkedin mx-4" style="color: white; font-size: 30px;"></div></a>
+					<a href="https://github.com/zEuS0390" target="_blank" rel="noopener noreferrer"><div class="fab fa-github mx-4 footer-link" style="color: white; font-size: 30px;"></div></a>
+					<a href="https://www.facebook.com/00ZeUsJaMeS00" target="_blank" rel="noopener noreferrer"><div class="fab fa-facebook-square mx-4 footer-link" style="color: white; font-size: 30px;"></div></a>
+					<a href="https://www.youtube.com/channel/UC4wkNKX83ZA5qZNf7CsflWQ" target="_blank" rel="noopener noreferrer"><div class="fab fa-youtube mx-4 footer-link" style="color: white; font-size: 30px;"></div></a>
+					<a href="https://www.linkedin.com/in/zeus0390" target="_blank" rel="noopener noreferrer"><div class="fab fa-linkedin mx-4 footer-link" style="color: white; font-size: 30px;"></div></a>
 				</div>
-				<div class="d-flex align-items-center">
+				<div class="d-flex align-items-center footer-copyright">
 					&copy; Copyright 2023
 				</div>
 			</footer>
