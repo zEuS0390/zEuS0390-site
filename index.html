@@ -108,6 +108,22 @@
 				visibility: hidden; 
 				pointer-events: none;
 			}
+			.style-my-image {
+				border: none;
+				box-shadow: 0px 0px 12px #fcfcfc;
+				animation: fade-up 0.5s;
+			}
+
+			@keyframes fade-up {
+				0% {
+					opacity: 0;
+					transform: translateY(30px) scale(0.9);
+				}
+				100% {
+					opacity: 1;
+					transform: translateY(0px) scale(1);
+				}
+			}
 		</style>
 
 	</head>
@@ -163,14 +179,14 @@
 			<section id="image">
 				<div class="row p-4 mx-2 mb-4">
 					<div class="col d-flex justify-content-center">
-						<img id="my-image" class="rounded-circle" src="https://avatars2.githubusercontent.com/u/39390245" style="max-width: 100%; height: auto;">
+						<img id="my-image" class="rounded-circle style-my-image" src="https://avatars2.githubusercontent.com/u/39390245" style="max-width: 100%; height: auto;">
 					</div>
 				</div>
 			</section>
 
 			<!-- About Section -->
 			<section id="about">
-				<div class="row p-4-md text-white rounded mx-2" style="background-color: rgba(23, 23, 23, 0.6);">
+				<div class="row p-4-md text-white rounded mx-2" style="background-color: rgba(23, 23, 23, 0.6); animation: fade-up 0.5s;">
 					<div class="p-5">
 
 						<!-- Title -->
@@ -201,7 +217,7 @@
 
 			<!-- Skills Section -->
 			<section id="skills">
-				<div class="row px-4-md pb-4-md text-white rounded mx-2" style="background-color: rgba(23, 23, 23, 0.6);">
+				<div class="row px-4-md pb-4-md text-white rounded mx-2" style="background-color: rgba(23, 23, 23, 0.6); animation: fade-up 0.5s;">
 					<div class="col p-5">
 
 						<!-- Title -->
@@ -301,7 +317,7 @@
 
 			<!-- Projects Section -->
 			<section id="projects">
-				<div class="row px-4-md pb-4-md text-white rounded mx-2" style="background-color: rgba(23, 23, 23, 0.6);">
+				<div class="row px-4-md pb-4-md text-white rounded mx-2" style="background-color: rgba(23, 23, 23, 0.6); animation: fade-up 0.5s;">
 					<div class="col p-5">
 
 						<!-- Title -->
