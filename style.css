@@ -1,0 +1,106 @@
+#my-image {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+}
+#my-image:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("docs/assets/background-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.projects-card-spinner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.projects-card-image-group {
+  position: relative;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(43, 43, 43);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(146, 146, 146);
+}
+.projects-card-anim {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+}
+.projects-card-anim:hover {
+  transform: scale(1.005);
+  z-index: 1;
+}
+.nav-brand {
+  font-size: 1rem;
+}
+.nav-link {
+  font-size: 0.9rem;
+}
+.p {
+  font-size: 1rem;
+}
+.card-header {
+  font-size: 0.9rem;
+}
+.card-title {
+  font-size: 1rem;
+}
+.card-text {
+  font-size: 0.9rem;
+}
+.section-title {
+  font-size: 1.5rem;
+}
+.section-desc {
+  font-size: 0.9rem;
+}
+.card-btn {
+  font-size: 0.9rem;
+}
+.footer-copyright {
+  font-size: 0.9rem;
+}
+section::before {
+  display: block;
+  content: " ";
+  margin-top: -100px;
+  height: 100px;
+  visibility: hidden;
+  pointer-events: none;
+}
+.style-my-image {
+  border: none;
+  box-shadow: 0px 0px 12px #fcfcfc;
+  animation: fade-up 0.5s;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
