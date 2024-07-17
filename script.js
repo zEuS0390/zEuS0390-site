@@ -57,19 +57,19 @@ function displayCards() {
       date: "May 2020",
       image: "docs/assets/sfml-snake-game-by-zEuS0390.jpg",
       anim: "docs/assets/sfml-snake-game-by-zEuS0390.gif",
-      title: "SFML Snake Game",
+      title: "Cyber Serpent",
       description:
-        "A snake game project from 2020 made in C++ with SFML library. You can watch the demo video from the provided link in README to see the actual gameplay.",
-      link: "https://github.com/zEuS0390/cpp-sfml-snake-game",
+        "Developed a neon-lit snake game project using the SFML library to understand its mechanics and functionalities with data structures and algorithms.",
+      link: "https://github.com/zEuS0390/cyber-serpent",
     },
     {
       date: "May 2020",
       image: "docs/assets/sfml-pong-game-by-zEuS0390.png",
       anim: "docs/assets/sfml-pong-game-by-zEuS0390.gif",
-      title: "SFML Pong Game",
+      title: "Paddle Dash",
       description:
-        "A simple pong game project from 2020 made in C++ with SFML library. You can watch the demo video from the provided link in README to see the actual gameplay.",
-      link: "https://github.com/zEuS0390/cpp-sfml-pong-game",
+        "Developed a pong game project using the SFML library to understand and apply 2D collision detection, movement, and trigonometry for the ball's bounce.",
+      link: "https://github.com/zEuS0390/paddle-dash",
     },
     {
       date: "June 2021",
